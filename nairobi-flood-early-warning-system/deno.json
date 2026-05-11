@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window", "dom", "dom.iterable", "deno.ns"]
+  },
+  "imports": {
+    "oak": "https://deno.land/x/oak@v12.6.1/mod.ts",
+    "cors": "https://deno.land/x/cors@v1.2.2/mod.ts",
+    "dotenv": "https://deno.land/x/dotenv@v3.2.2/mod.ts",
+    "date-fns": "https://deno.land/x/date_fns@v3.6.0/index.js",
+    "std/": "https://deno.land/std@0.208.0/"
+  },
+  "tasks": {
+    "start": "deno run --allow-net --allow-env --allow-read --watch backend/main.ts",
+    "dev": "deno run --allow-net --allow-env --allow-read --allow-watch backend/main.ts",
+    "test": "deno test --allow-net --allow-env --allow-read",
+    "cache": "deno cache backend/deps.ts"
+  },
+  "fmt": {
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "proseWrap": "preserve",
+    "useTabs": false,
+    "singleQuote": true
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  }
+}
